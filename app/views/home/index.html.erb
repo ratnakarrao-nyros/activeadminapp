@@ -1,0 +1,32 @@
+
+<h2> Task Details </h2>
+<table class="table table-condensed">
+
+<thead>
+ <tr> 
+  <th>Sr No</th>
+  <th>Project Name</th>
+ </tr>
+</thead>
+<tbody>
+<% @projects.each_with_index do |project,index| %>
+<tr>
+ <td><%= index+1 %></td>
+ <td>
+  <strong> <%= project.name %> </strong>
+  <table>
+    <th>Task List</th>
+      <% project.tasks.each do |task| %>
+      <tr>
+      <td><%= task.name %></td>
+      </tr>
+      <% end %>
+  </table>
+</td>
+
+</tr>
+<% end %>
+</tbody>
+</table>
+
+
