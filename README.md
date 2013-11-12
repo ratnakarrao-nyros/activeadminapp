@@ -1,0 +1,4 @@
+activeadminapp
+==============
+
+demo app
